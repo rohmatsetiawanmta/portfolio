@@ -1,0 +1,737 @@
+@import url("https://font.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #f1f1f1;
+  --second-color: #ddd;
+  --third-color: #999;
+  --text-color: #222;
+  --alternative-text-color: #111;
+  --second-text-color: #0025ff;
+  --active-color: #0025ff;
+  --button-color: #0025ff;
+
+  --main-blue: #004e98;
+  --main-gray: #f2f2f2;
+  --main-orange: #ff6700;
+  --main-white: #ffffff;
+  --main-black: #000000;
+  --second-black: #333333;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-family: "Work Sans", sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 10% 2rem;
+  background: var(--main-white);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 10%;
+  background: var(--main-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--main-white);
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 2rem;
+  color: var(--main-white);
+  margin-left: 0.5rem;
+  padding: 1rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-black);
+  border-bottom: 0.75rem solid var(--main-orange);
+  background: var(--main-white);
+  font-weight: 500;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--main-gray);
+  display: none;
+}
+
+.home {
+  background: linear-gradient(var(--main-black), var(--second-black));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-image img {
+  width: 25vw;
+  border-radius: 50%;
+  animation: floatImage 4s ease-in-out infinite;
+  border: var(--main-blue) 3rem solid;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-content {
+  margin-right: 5rem;
+  color: var(--main-gray);
+}
+
+.home-content h2 {
+  font-size: 32rem;
+  font-family: "League Gothic", sans-serif;
+  line-height: 100%;
+}
+
+.home-content h3 {
+  font-size: 8rem;
+  font-weight: 700;
+  font-family: "League Gothic", sans-serif;
+}
+
+span {
+  color: var(--main-orange);
+}
+
+.home-social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-blue);
+  border-radius: 50%;
+  font-size: 3rem;
+  color: var(--main-blue);
+  margin-right: 1.5rem;
+  transition: 0.5s ease;
+}
+
+.home-social-media a:hover {
+  background: var(--main-blue);
+  color: var(--main-white);
+  box-shadow: 0 0 1rem var(--main-blue);
+}
+
+.btn-box-1 {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--main-blue);
+  border-radius: 4rem;
+  box-shadow: 0 0.25rem 1rem var(--main-blue);
+  font-size: 2rem;
+  color: var(--main-white);
+  font-weight: 500;
+  transition: 0.5s ease;
+  margin-top: 5rem;
+  margin-right: 2rem;
+}
+
+.btn-box-1:hover {
+  box-shadow: none;
+}
+
+.btn-box-2 {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--main-orange);
+  border-radius: 4rem;
+  box-shadow: 0 0.25rem 1rem var(--main-orange);
+  font-size: 2rem;
+  color: var(--main-white);
+  font-weight: 500;
+  transition: 0.5s ease;
+  margin-top: 5rem;
+  margin-right: 2rem;
+}
+
+.btn-box-2:hover {
+  box-shadow: none;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--main-gray);
+}
+
+.about-image img {
+  width: 25vw;
+  border-radius: 50%;
+  border: var(--main-blue) 3rem solid;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  font-size: 12rem;
+  font-family: "League Gothic", sans-serif;
+  line-height: 100%;
+}
+
+.about-content h3 {
+  font-size: 6rem;
+  font-family: "League Gothic", sans-serif;
+}
+
+.about-content p {
+  font-size: 2rem;
+  margin: 2rem 0 3rem;
+  line-height: 150%;
+}
+
+.skill h2 {
+  margin-bottom: 5rem;
+  font-size: 12rem;
+  font-family: "League Gothic", sans-serif;
+  line-height: 100%;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.skill-group {
+  background: var(--main-gray);
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.skill-group-name {
+  font-family: "League Gothic", sans-serif;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--main-blue);
+  margin-bottom: 2rem;
+  border-bottom: 0.25rem solid var(--main-black);
+  padding-bottom: 2rem;
+}
+
+.skill-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  border: 0.1rem var(--main-black) solid;
+  padding: 0.25rem 1.5rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  transition: 0.5s ease;
+}
+
+.skill-item:hover {
+  border-color: var(--main-black);
+  background: var(--main-black);
+  color: var(--main-gray);
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+}
+
+.skill-name {
+  margin-left: 1rem;
+  font-size: 1.75rem;
+}
+
+.skill > h3 {
+  font-size: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.skill {
+  padding-bottom: 7rem;
+}
+
+.portfolio {
+  background: var(--main-gray);
+}
+
+.portfolio h2 {
+  margin-bottom: 4rem;
+  font-size: 12rem;
+  font-family: "League Gothic", sans-serif;
+  line-height: 100%;
+}
+
+.portfolio .subportfolio {
+  font-family: "League Gothic", sans-serif;
+  font-size: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  color: var(--main-blue);
+}
+
+.portfolio {
+  padding-bottom: 7rem;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--main-gray);
+  overflow: hidden;
+  display: flex;
+}
+
+.portfolio-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.portfolio-box:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--main-black), var(--second-black));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+  color: var(--main-gray);
+}
+
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0);
+}
+
+.portfolio h3 {
+  font-size: 3rem;
+}
+
+.portfolio p {
+  font-size: 1.5rem;
+}
+
+.portfolio-layer > a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--main-gray);
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+.portfolio-layer > h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-layer a i {
+  font-size: 2rem;
+  color: var(--main-black);
+}
+
+p > a {
+  color: var(--main-gray);
+  text-decoration: underline;
+}
+
+.portfolio-tag-container {
+  display: inline-flex;
+}
+
+.portfolio-tag {
+  color: var(--main-white);
+  background: var(--main-orange);
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+
+.contact-container {
+  margin-top: 7rem;
+  display: grid;
+  width: 100%;
+  justify-content: center;
+}
+
+.contact-container .contact-box {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.contact-box i {
+  font-size: 4rem;
+  color: var(--main-black);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.25rem solid var(--main-black);
+  transition: 0.5s ease;
+}
+
+.contact-box:hover i {
+  border: 0.25rem solid var(--main-blue);
+  background: var(--main-blue);
+  color: var(--main-white);
+  scale: 1.2;
+}
+
+.contact-box h3 {
+  margin: 0 3rem;
+  width: 100%;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--main-black);
+}
+
+.contact-box:hover h3 {
+  color: var(--main-blue);
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+  font-size: 12rem;
+  font-family: "League Gothic", sans-serif;
+  line-height: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 10%;
+  background: var(--main-orange);
+}
+
+.footer-text p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-gray);
+}
+
+.footer-icon-top a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: var(--main-gray);
+  border-radius: 1rem;
+  transition: 0.5s ease;
+}
+
+.footer-icon-top a:hover {
+  box-shadow: 0 0 1rem var(--button-color);
+}
+
+.footer-icon-top a i {
+  font-size: 2rem;
+  color: var(--main-black);
+}
+
+@media (max-width:1350px){
+  html {
+    font-size: 55%;
+  }
+  
+  .home-content h2 {
+    font-size: 28rem;
+  }
+  
+  .home-content h3 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home-image img {
+    width: 30vw;
+  }
+
+  .home-content h2 {
+    font-size: 24rem;
+  }
+  
+  .home-content h3 {
+    font-size: 6rem;
+  }
+  
+  span {
+    color: var(--main-orange);
+  }
+  .portfolio-layer > h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 2rem 5%;
+  }
+
+  section {
+    padding: 10rem 5% 2rem;
+  }
+ 
+  .home-image img {
+    width: 35vw;
+    margin-right: 5rem;
+  }
+
+  .skill {
+    padding-bottom: 7rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio-layer > h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer {
+    padding: 2rem 5%;
+  }
+}
+
+@media (max-width: 875px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: var(--main-blue);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    border-bottom: 0rem;
+    border-left: 0.5rem solid var(--main-orange);
+    background: var(--main-gray);
+  }
+
+  .home {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .home-content h3 {
+    font-size: 4.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .home-content p {
+    width: 80vw;
+    line-height: 150%;
+  }
+
+  .about-content p {
+    line-height: 150%;
+  }
+
+  .home-image img {
+    margin-top: 8rem;
+    width: 50vw;
+    margin-bottom: 5rem;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    min-height: auto;
+  }
+
+  .about img {
+    display: none;
+  }
+
+  .skill h2 {
+    margin-bottom: 3rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact {
+    min-height: auto;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home-content h2 {
+    font-size: 20rem;
+  }
+
+  .home-content h3 {
+    font-size: 3.5rem;
+  }
+
+  .about-content h3 {
+    font-size: 5rem;
+  }
+
+  .skill-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+
+  .contact-box i {
+    font-size: 3rem;
+    padding: 0.75rem;
+  }
+
+  .contact-box h3 {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+}
+
+@media (max-width: 435px) {
+  .home-content h2 {
+    font-size: 10rem;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .portfolio-layer > h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
